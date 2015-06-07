@@ -1,0 +1,9 @@
+
+joe:
+  email:  joe@bt.com
+  encrypted_password:  <%= Devise.bcrypt(User,'Password1') %>
+
+#
+juanita:
+  email:  juanita@espana.es
+  encrypted_password:  <%= Devise.bcrypt(User,'Password2') %>

@@ -8,7 +8,12 @@ Rails.application.routes.draw do
   #root "application#helloagain"
   root "static_pages#home"
   
-  # The priority is based upon order of creation: first created -> highest priority.
+  devise_for :users, controllers: {
+                          sessions: "users/sessions" ,
+                          registrations: "users/registrations"
+                                  }
+  
+  # The p riority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
